@@ -23,7 +23,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency "activemodel", ">= 5.0"
   gem.add_dependency "activesupport", ">= 5.0"
   gem.add_dependency "equivalent-xml"
-  gem.add_dependency "rdf", "~> 1.1"
+  gem.add_dependency "rdf", "~> 2"
   gem.add_dependency "rdf-rdfxml"
   gem.add_dependency "rdf-turtle"
   gem.add_dependency "rdf-json"
