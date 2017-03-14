@@ -35,8 +35,9 @@ Tripod.configure do |config|
   # config.query_endpoint = 'http://127.0.0.1:3030/tripod-test/sparql'
   # config.data_endpoint = 'http://127.0.0.1:3030/tripod-test/data'
 
-  config.update_endpoint = 'http://127.0.0.1:3002/sparql/raw/update'
-  config.query_endpoint = 'http://127.0.0.1:3002/sparql/raw'
+   config.update_endpoint = 'http://app.talkiu.com:8030/talkiutest/update'
+   config.query_endpoint = 'http://app.talkiu.com:8030/talkiutest/query'
+   config.timeout_seconds = 15
   #config.data_endpoint = 'http://127.0.0.1:3030/tripod-test/data'
 end
 
