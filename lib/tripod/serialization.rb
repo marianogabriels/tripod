@@ -20,7 +20,15 @@ module Tripod::Serialization
 
   # Serialises this resource's triples to JSON-LD
   def to_json(opts={})
-    get_triples_for_this_resource.dump(:jsonld)
+    JSON.parse(get_triples_for_this_resource.dump(:jsonld))[0].to_json
+  end
+
+  def to_hash
+    JSON.parse(get_triples_for_this_resource.dump(:jsonld))[0]
+  end
+
+  def as_json
+    JSON.parse(get_triples_for_this_resource.dump(:jsonld))[0].as_json
   end
 
   def to_text
