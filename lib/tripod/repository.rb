@@ -62,7 +62,7 @@ module Tripod::Repository
   # returns a graph of triples from the underlying repository where this resource's uri is the subject.
   def get_triples_for_this_resource
     triples_graph = RDF::Graph.new
-    @repository.query([RDF::URI.new(self.uri), :predicate, :object]) do |stmt|
+    @repository.query([RDF::URI.new(self.uri).to_h, :predicate, :object]) do |stmt|
       triples_graph << stmt
     end
     triples_graph
